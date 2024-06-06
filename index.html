@@ -90,12 +90,15 @@
                 switch(home) {
                     case 'land':
                         creature.style.backgroundColor = 'green';
+                        creature.style.fontFamily = 'Arial, sans-serif'; 
                         break;
                     case 'water':
                         creature.style.backgroundColor = 'blue';
+                        creature.style.fontFamily = 'Courier New, monospace'; 
                         break;
                     case 'air':
                         creature.style.backgroundColor = 'yellow';
+                        creature.style.fontFamily = 'Georgia, serif'; 
                         break;
                 }
             });
@@ -108,9 +111,11 @@
                 switch(type) {
                     case 'animal':
                         creature.style.border = '2px solid red';
+                        creature.style.fontFamily = 'Verdana, sans-serif';
                         break;
                     case 'insect':
                         creature.style.border = '2px dashed orange';
+                        creature.style.fontFamily = 'Tahoma, sans-serif'; 
                         break;
                 }
             });
@@ -121,6 +126,7 @@
             creatures.forEach(creature => {
                 creature.style.backgroundColor = 'white';
                 creature.style.border = '2px solid black';
+                creature.style.fontFamily = ''; // Reset font family
             });
         }
     </script>    
