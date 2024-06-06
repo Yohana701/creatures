@@ -21,7 +21,7 @@
 </head>
 <body>
     <h1>Creatures</h1>
-    <h3>A JavaScript data attributes example by Yohana Gebregziabher</h3>
+    <h3>A JavaScript data attributes example by NAME HERE</h3>
     <p>This page demonstrates how to use JavaScript data attributes to differentiate data.</p>
     <p>When you click <b>Show Creature Home</b>, the background color will change color based on their natural environment:</p>
     <div>
@@ -87,18 +87,19 @@
             const creatures = document.querySelectorAll('.creature');
             creatures.forEach(creature => {
                 const home = creature.getAttribute('data-home');
+                const textElements = creature.querySelectorAll('h3, p');
                 switch(home) {
                     case 'land':
                         creature.style.backgroundColor = 'green';
-                        creature.style.fontFamily = 'Arial, sans-serif'; 
+                        textElements.forEach(el => el.style.fontFamily = 'Arial, sans-serif'); 
                         break;
                     case 'water':
                         creature.style.backgroundColor = 'blue';
-                        creature.style.fontFamily = 'Courier New, monospace'; 
+                        textElements.forEach(el => el.style.fontFamily = 'Courier New, monospace'); 
                         break;
                     case 'air':
                         creature.style.backgroundColor = 'yellow';
-                        creature.style.fontFamily = 'Georgia, serif'; 
+                        textElements.forEach(el => el.style.fontFamily = 'Georgia, serif'); 
                         break;
                 }
             });
@@ -108,14 +109,15 @@
             const creatures = document.querySelectorAll('.creature');
             creatures.forEach(creature => {
                 const type = creature.getAttribute('data-type');
+                const textElements = creature.querySelectorAll('h3, p');
                 switch(type) {
                     case 'animal':
                         creature.style.border = '2px solid red';
-                        creature.style.fontFamily = 'Verdana, sans-serif';
+                        textElements.forEach(el => el.style.fontFamily = 'Verdana, sans-serif'); 
                         break;
                     case 'insect':
                         creature.style.border = '2px dashed orange';
-                        creature.style.fontFamily = 'Tahoma, sans-serif'; 
+                        textElements.forEach(el => el.style.fontFamily = 'Tahoma, sans-serif'); 
                         break;
                 }
             });
@@ -126,7 +128,8 @@
             creatures.forEach(creature => {
                 creature.style.backgroundColor = 'white';
                 creature.style.border = '2px solid black';
-                creature.style.fontFamily = ''; // Reset font family
+                const textElements = creature.querySelectorAll('h3, p');
+                textElements.forEach(el => el.style.fontFamily = ''); 
             });
         }
     </script>    
